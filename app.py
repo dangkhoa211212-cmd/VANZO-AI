@@ -68,7 +68,7 @@ with col_ctrl:
     col_style1, col_style2 = st.columns(2)
     with col_style1:
         visual_style = st.selectbox("🎨 Phong cách hình ảnh", ["Cinematic 4K", "Anime Nhật Bản", "Thực tế (Realistic)", "Hoạt hình 3D Pixar", "Retro thập niên 90"])
-    with col_style2:
+with col_style2:
         camera_motion = st.selectbox("🎥 Chuyển động máy quay", ["Drone Bay Lướt Mượt", "Zoom In Cận Cảnh Cảm Xúc", "Pan Ngang Mượt Mà", "Góc nhìn thứ nhất (POV)"])
 
     # 4. STUDIO ÂM NHẠC & ÂM THANH (NEW!)
