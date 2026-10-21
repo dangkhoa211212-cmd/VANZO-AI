@@ -68,11 +68,11 @@ with col_ctrl:
     col_style1, col_style2 = st.columns(2)
     with col_style1:
         visual_style = st.selectbox("🎨 Phong cách hình ảnh", ["Cinematic 4K", "Anime Nhật Bản", "Thực tế (Realistic)", "Hoạt hình 3D Pixar", "Retro thập niên 90"])
-with col_style2:
+    with col_style2:
         camera_motion = st.selectbox("🎥 Chuyển động máy quay", ["Drone Bay Lướt Mượt", "Zoom In Cận Cảnh Cảm Xúc", "Pan Ngang Mượt Mà", "Góc nhìn thứ nhất (POV)"])
 
-    # 4. STUDIO ÂM NHẠC & ÂM THANH (NEW!)
-with st.expander("🎵 Cài Đặt Âm Nhạc & Âm Thanh AI (Sound Studio)", expanded=True):
+    # 4. STUDIO ÂM NHẠC & ÂM THANH
+    with st.expander("🎵 Cài Đặt Âm Nhạc & Âm Thanh AI (Sound Studio)", expanded=True):
         music_genre = st.selectbox("🎼 Thể loại nhạc nền AI:", [
             "Lofi Chill nhẹ nhàng (Thư giãn)",
             "Cinematic Hùng Tráng (Kịch tính)",
@@ -115,7 +115,6 @@ with col_prev:
 
 if generate_btn:
     with st.spinner("🤖 AI đang phân tích chủ đề, phối nhạc và kết xuất video mượt mà... Vui lòng đợi trong giây lát!"):
-        # Giả lập tiến trình xử lý mượt mà
         import time
         time.sleep(1.5)
     st.success("🎉 Đã hoàn tất sáng tạo toàn bộ video, phân cảnh và đồng bộ âm nhạc thành công!")
@@ -128,7 +127,7 @@ st.markdown("### 🎞️ Timeline, Ghép Nối & Xuất Bản Video Hoàn Chỉn
 col_pub1, col_pub2 = st.columns([1, 1], gap="medium")
 
 with col_pub1:
-export_format = st.selectbox("📦 Định dạng xuất video:", ["MP4 (Tối ưu TikTok / Reels / Shorts)", "MOV (Chất lượng cao dựng phim)", "GIF (Hoạt ảnh ngắn)"])
+    export_format = st.selectbox("📦 Định dạng xuất video:", ["MP4 (Tối ưu TikTok / Reels / Shorts)", "MOV (Chất lượng cao dựng phim)", "GIF (Hoạt ảnh ngắn)"])
 
 with col_pub2:
     st.write("")
@@ -139,7 +138,6 @@ if render_action:
     st.balloons()
     st.success("✅ Video vạn năng của sư huynh đã được kết xuất hoàn tất kèm âm nhạc và hiệu ứng sống động!")
     
-    # Nút tải xuống file MP4 thực tế trên web
     st.download_button(
         label="📥 Tải Xuống Video Hoàn Chỉnh Về Máy (MP4)",
         data=b"vanzo_ai_master_video_binary_stream",
