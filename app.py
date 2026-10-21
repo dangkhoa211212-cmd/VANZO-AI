@@ -72,7 +72,7 @@ with col_style2:
         camera_motion = st.selectbox("🎥 Chuyển động máy quay", ["Drone Bay Lướt Mượt", "Zoom In Cận Cảnh Cảm Xúc", "Pan Ngang Mượt Mà", "Góc nhìn thứ nhất (POV)"])
 
     # 4. STUDIO ÂM NHẠC & ÂM THANH (NEW!)
-    with st.expander("🎵 Cài Đặt Âm Nhạc & Âm Thanh AI (Sound Studio)", expanded=True):
+with st.expander("🎵 Cài Đặt Âm Nhạc & Âm Thanh AI (Sound Studio)", expanded=True):
         music_genre = st.selectbox("🎼 Thể loại nhạc nền AI:", [
             "Lofi Chill nhẹ nhàng (Thư giãn)",
             "Cinematic Hùng Tráng (Kịch tính)",
